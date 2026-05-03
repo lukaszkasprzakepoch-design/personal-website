@@ -15,8 +15,8 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 
-const d3geo = require("../node_modules/d3-geo/dist/d3-geo.js");
-const topojson = require("../node_modules/topojson-client/dist/topojson-client.js");
+const d3geo = require("d3-geo");
+const topojson = require("topojson-client");
 
 const OUT_DIR = path.join(__dirname, "../public/maps");
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-10m.json";
