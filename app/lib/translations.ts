@@ -95,56 +95,53 @@ export const translations = {
       skillCategories: ["Languages", "ML / AI", "Algorithms", "Other"],
       awards: [
         {
-          year: "2026",
-          title: "UNSW Sydney Exchange Nomination",
-          description:
-            "Nominated for a student exchange in 2027 at the University of New South Wales in Sydney — one of Australia's top universities.",
-        },
-        {
           year: "2024",
           title: "Top 0.1% — Poland Matura Examination",
           description:
             "Recognised by the National Education Commission for scoring in the top 0.1% of the national Matura exam.",
+          diploma: "/Dyplomy/CKE.webp",
         },
         {
           year: "2024",
           title: "Finalist — Polish Technical Olympiad (OWT)",
           description:
             "Advanced to the final of the nationwide Polish Technical Olympiad — one of the most prestigious STEM competitions in Poland.",
+          diploma: "/Dyplomy/OWT.webp",
         },
         {
           year: "2024",
           title: "Distinction — Polish Informatics Olympiad",
           description:
             "National distinction in the Informatics Olympiad for outstanding results in competitive programming.",
+          diploma: "/Dyplomy/CamScanner 08-26-2024 21.16.webp",
         },
         {
           year: "2024",
-          title: "Semi-finalist — Polish Mathematics Olympiad",
-          description: "Advanced to the semi-final of the national Mathematics Olympiad.",
-        },
-        {
-          year: "2024",
-          title: "Top 10 — National Competitive Programming Contest",
-          description: "Finished in the top 10 of a national competitive programming contest.",
+          title: "Exempted from Matura Theory Exam",
+          description:
+            "Exempted from the theory portion of the Matura examination based on outstanding academic performance.",
+          link: "https://zspkleszczow.pl/2023/03/26/charytatywny-turniej-szachowy-w-ramach-projektu-zwolnieni-z-teorii/",
         },
         {
           year: "2023",
           title: "ZDOLNI Scholar",
           description:
             "Selected for the ZDOLNI programme — a nationwide community for academically engaged secondary school students.",
+          diploma: "/Dyplomy/Zdolni.webp",
+        },
+        {
+          year: "2023",
+          title: "CanSat Competition — Distinction",
+          description:
+            "National distinction in the CanSat competition — a high school satellite design and programming challenge.",
+          diploma: "/Dyplomy/cansat_2023_wyróżnienie_17.webp",
         },
         {
           year: "2022",
           title: "Queen Hedvig Scholarship Laureate",
           description:
             "Polish Queen Jadwiga scholarship for top students, combined with an academic trip to Stanford University.",
-        },
-        {
-          year: "2021–2024",
-          title: "PGE Scholar",
-          description:
-            "Three-time PGE scholarship recipient (2021, 2022, 2024) for top academic standing.",
+          diploma: "/Dyplomy/QHS.webp",
         },
       ],
     },
@@ -246,7 +243,7 @@ export const translations = {
           title: "On top of Pasketti",
           year: "2026",
           description:
-            "Konkurs DrivenData — budowanie najlepszego modelu ML do rozpoznawania mowy dzieci w celu wczesnego wykrywania dysleksji i poprawy testów umiejętności czytania.",
+            "Konkurs DrivenData — budowanie najlepszego modelu ML do rozpoznawania mowy dzieci w celu wczesnego wykrywania dysleksji i poprawy testów umiejętności czytania. Poprawiliśmy światowy benchmark o 8 punktów procentowych!",
           tags: ["Python", "PyTorch", "ASR", "ML"],
           href: "https://www.drivendata.org/competitions/309/childrens-phonetic-asr/leaderboard/",
           accent: "indigo",
@@ -255,7 +252,7 @@ export const translations = {
           title: "Policy Pipeline Simulator",
           year: "2025–2026",
           description:
-            "Agentyczna AI dla holenderskiego Ministerstwa Spraw Wewnętrznych (BZK). Symuluje procesy legislacyjne za pomocą agentów AI; zbudowane według wymagań urzędników rządowych.",
+            "Agentyczna AI dla holenderskiego Ministerstwa Spraw Wewnętrznych (BZK). Symuluje procesy legislacyjne za pomocą agentów AI; zbudowany w celu zbadania możliwości AI w administracji rządowej.",
           tags: ["Agentic AI", "Python", "Web App", "LLM"],
           href: "https://virtuelekamer.github.io/",
           accent: "violet",
@@ -265,7 +262,7 @@ export const translations = {
           title: "Online Shop — branco.pl",
           year: "2024",
           description:
-            "Sklep internetowy dla polskiej marki odzieżowej. Zintegrowane modele AI do personalizacji rekomendacji produktów i zwiększenia sprzedaży online.",
+            "E-commerce dla marki odzieżowej moich rodziców. Stworzyłem system generowania AI modelek do pokazania produktów w różnych rozmiarach i stylach. Uciąłem koszty, zwiększyłem zyski.",
           tags: ["Next.js", "AI", "E-commerce"],
           href: "https://branco.pl",
           accent: "emerald",
@@ -273,7 +270,7 @@ export const translations = {
       ],
     },
     accomplishments: {
-      title: "Osiągnięcia",
+      title: "Osiągnięcia w szkole średniej",
       subtitle: "Nagrody, olimpiady i wyróżnienia.",
       techStack: "Stack technologiczny",
       experience: "Doświadczenie",
@@ -285,56 +282,53 @@ export const translations = {
       skillCategories: ["Języki", "ML / AI", "Algorytmy", "Inne"],
       awards: [
         {
-          year: "2026",
-          title: "Nominacja na wymianę — UNSW Sydney",
-          description:
-            "Nominowany do wymiany studenckiej w 2027 roku na Uniwersytecie Nowej Południowej Walii w Sydney — jednej z najlepszych uczelni w Australii.",
-        },
-        {
           year: "2024",
           title: "Top 0,1% — Matura ogólnopolska",
           description:
-            "Wyróżnienie Krajowej Komisji Edukacji za wynik w czołowych 0,1% ogólnopolskiej matury.",
+            "Wyróżnienie Krajowej Komisji Edukacji za bycie wśród 230 najlepszych maturzystów.",
+          diploma: "/Dyplomy/CKE.webp",
         },
         {
           year: "2024",
           title: "Finalista — Olimpiada Wiedzy Technicznej (OWT)",
           description:
             "Awans do finału ogólnopolskiej Olimpiady Wiedzy Technicznej — jednego z najbardziej prestiżowych konkursów STEM w Polsce.",
+          diploma: "/Dyplomy/OWT.webp",
         },
         {
           year: "2024",
           title: "Wyróżnienie — Olimpiada Informatyczna",
           description:
             "Wyróżnienie ogólnopolskie w Olimpiadzie Informatycznej za wybitne wyniki w programowaniu konkursowym.",
+          diploma: "/Dyplomy/InformatycznaOlimpiada.webp",
         },
         {
           year: "2024",
-          title: "Półfinalista — Olimpiada Matematyczna",
-          description: "Awans do półfinału ogólnopolskiej Olimpiady Matematycznej.",
-        },
-        {
-          year: "2024",
-          title: "Top 10 — Ogólnopolski konkurs programowania",
-          description: "Miejsce w top 10 ogólnopolskiego konkursu programowania.",
+          title: "Zwolnieni z teorii — Charytatywny turniej",
+          description:
+            "Zorganizowaliśmy charytatywny turniej szachowy, zbierając fundusze na poszkodowanego 9-letniego młodszego kolegę-szachistę.",
+          link: "https://zspkleszczow.pl/2023/03/26/charytatywny-turniej-szachowy-w-ramach-projektu-zwolnieni-z-teorii/",
         },
         {
           year: "2023",
           title: "Stypendysta ZDOLNI",
           description:
             "Wybrany do programu ZDOLNI — ogólnopolskiej społeczności dla naukowo zaangażowanych uczniów szkół średnich.",
+          diploma: "/Dyplomy/Zdolni.webp",
+        },
+        {
+          year: "2023",
+          title: "Konkurs CanSat — Wyróżnienie",
+          description:
+            "Wyróżnienie w ogólnopolskim konkursie CanSat — konkurencji polegającej na projektowaniu i programowaniu satelity wielkości puszki.",
+          diploma: "/Dyplomy/cansat_2023_wyróżnienie_17.webp",
         },
         {
           year: "2022",
           title: "Laureat Stypendium im. Królowej Jadwigi",
           description:
             "Polskie stypendium im. Królowej Jadwigi dla najlepszych uczniów, połączone z wyjazdem naukowym do Stanford University.",
-        },
-        {
-          year: "2021–2024",
-          title: "Stypendysta PGE",
-          description:
-            "Trzykrotny stypendysta PGE (2021, 2022, 2024) za czołowe miejsce w klasie.",
+          diploma: "/Dyplomy/QHS.webp",
         },
       ],
     },

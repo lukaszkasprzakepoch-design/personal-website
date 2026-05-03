@@ -1,6 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
+import DiplomaModal from "./DiplomaModal";
 
 const skillItems: string[][] = [
   ["Python", "C++", "Java", "Scala", "Assembly"],
@@ -11,28 +13,67 @@ const skillItems: string[][] = [
 
 export default function Accomplishments() {
   const { t } = useLanguage();
+  const [selectedDiploma, setSelectedDiploma] = useState<{ image: string; title: string } | null>(
+    null
+  );
 
   return (
-    <section id="accomplishments" className="py-24 bg-zinc-900">
-      <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-zinc-100 mb-2">{t.accomplishments.title}</h2>
-        <p className="text-zinc-500 mb-12 text-sm">{t.accomplishments.subtitle}</p>
+    <>
+      <section id="accomplishments" className="py-24 bg-zinc-900">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-zinc-100 mb-2">{t.accomplishments.title}</h2>
+          <p className="text-zinc-500 mb-12 text-sm">{t.accomplishments.subtitle}</p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Timeline */}
-          <ul className="flex flex-col gap-5">
-            {t.accomplishments.awards.map((a, i) => (
-              <li key={i} className="flex gap-4 group">
-                <span className="font-mono text-xs text-indigo-400 pt-1 shrink-0 w-14 leading-tight">
-                  {a.year}
-                </span>
-                <div className="border-l border-zinc-800 pl-4 group-hover:border-indigo-700 transition-colors">
-                  <h3 className="font-semibold text-zinc-100 text-sm">{a.title}</h3>
-                  <p className="text-xs text-zinc-400 mt-1 leading-relaxed">{a.description}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {/* Timeline */}
+            <ul className="flex flex-col gap-5">
+              {t.accomplishments.awards.map((a, i) => {
+                const hasInteraction = ("diploma" in a && a.diploma) || ("link" in a && a.link) || ("ref" in a && a.ref);
+                const link = ("link" in a && a.link) || ("ref" in a && a.ref);
+
+                return (
+                  <li
+                    key={i}
+                    onClick={() => {
+                      if ("diploma" in a && a.diploma) {
+                        setSelectedDiploma({ image: a.diploma, title: a.title });
+                      } else if (link) {
+                        window.open(link, "_blank");
+                      }
+                    }}
+                    className={`flex gap-4 group ${hasInteraction ? "cursor-pointer" : ""}`}
+                  >
+                    <span className="font-mono text-xs text-indigo-400 pt-1 shrink-0 w-14 leading-tight">
+                      {a.year}
+                    </span>
+                    <div
+                      className={`border-l pl-4 transition-colors ${
+                        hasInteraction
+                          ? "border-zinc-800 group-hover:border-indigo-700"
+                          : "border-zinc-800"
+                      }`}
+                    >
+                      <h3
+                        className={`font-semibold text-sm ${
+                          hasInteraction
+                            ? "text-indigo-300 group-hover:text-indigo-200"
+                            : "text-zinc-100"
+                        }`}
+                      >
+                        {a.title}
+                        {"diploma" in a && a.diploma && (
+                          <span className="ml-2 text-xs text-indigo-400">📋</span>
+                        )}
+                        {link && (
+                          <span className="ml-2 text-xs text-indigo-400">🔗</span>
+                        )}
+                      </h3>
+                      <p className="text-xs text-zinc-400 mt-1 leading-relaxed">{a.description}</p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
 
           {/* Skills grid */}
           <div className="flex flex-col gap-6">
@@ -86,5 +127,13 @@ export default function Accomplishments() {
         </div>
       </div>
     </section>
+
+    <DiplomaModal
+      isOpen={!!selectedDiploma}
+      image={selectedDiploma?.image || ""}
+      title={selectedDiploma?.title || ""}
+      onClose={() => setSelectedDiploma(null)}
+    />
+    </>
   );
 }
