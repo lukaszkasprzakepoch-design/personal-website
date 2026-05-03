@@ -39,6 +39,7 @@ export default function Accomplishments() {
                         setSelectedDiploma({ image: a.diploma, title: a.title });
                       } else if (link && typeof link === "string") {
                         window.open(link, "_blank");
+                        
                       }
                     }}
                     className={`flex gap-4 group ${hasInteraction ? "cursor-pointer" : ""}`}
