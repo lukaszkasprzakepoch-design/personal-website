@@ -29,7 +29,7 @@ export default function Accomplishments() {
             <ul className="flex flex-col gap-5">
               {t.accomplishments.awards.map((a, i) => {
                 const hasInteraction = ("diploma" in a && a.diploma) || ("link" in a && a.link) || ("ref" in a && a.ref);
-                const link = ("link" in a && a.link) || ("ref" in a && a.ref);
+                const link = (("link" in a && a.link) || ("ref" in a && a.ref)) as string | undefined;
 
                 return (
                   <li
@@ -37,7 +37,7 @@ export default function Accomplishments() {
                     onClick={() => {
                       if ("diploma" in a && a.diploma) {
                         setSelectedDiploma({ image: a.diploma, title: a.title });
-                      } else if (link) {
+                      } else if (link && typeof link === "string") {
                         window.open(link, "_blank");
                       }
                     }}
