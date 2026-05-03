@@ -1,19 +1,22 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
-const roles = [
-  "ML Engineer",
-  "CS Student @ TU Delft",
-  "Chess Player (2002 ELO)",
-  "AI Researcher",
-];
-
-function useTypingRotator(items: string[], speed = 60, pause = 1800) {
+function useTypingRotator(items: readonly string[], speed = 60, pause = 1800) {
   const [display, setDisplay] = useState("");
   const [idx, setIdx] = useState(0);
   const [phase, setPhase] = useState<"typing" | "pausing" | "erasing">("typing");
   const charRef = useRef(0);
+
+  useEffect(() => {
+    charRef.current = 0;
+    setDisplay("");
+    setIdx(0);
+    setPhase("typing");
+  // Reset when language changes (items array reference changes)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items]);
 
   useEffect(() => {
     const target = items[idx];
@@ -46,15 +49,9 @@ function useTypingRotator(items: string[], speed = 60, pause = 1800) {
   return display;
 }
 
-const stats = [
-  { label: "GPA", value: "8.5 / 10", sub: "TU Delft" },
-  { label: "ELO", value: "2002", sub: "FIDE rated" },
-  { label: "TOEFL", value: "108", sub: "Bilingual EN" },
-  { label: "Year", value: "2nd", sub: "Class of 2027" },
-];
-
 export default function Hero() {
-  const typed = useTypingRotator(roles);
+  const { t } = useLanguage();
+  const typed = useTypingRotator(t.hero.roles);
 
   return (
     <section
@@ -62,10 +59,12 @@ export default function Hero() {
       className="min-h-screen flex flex-col justify-center max-w-5xl mx-auto px-6 pt-20"
     >
       <p className="text-sm font-mono text-indigo-400 mb-4 tracking-widest uppercase">
-        Hello, I&apos;m
+        {t.hero.greeting}
       </p>
       <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-zinc-100 mb-4">
-        Lukasz<br />Kasprzak
+        Lukasz
+        <br />
+        Kasprzak
       </h1>
 
       <div className="h-8 mb-6">
@@ -75,15 +74,10 @@ export default function Hero() {
         </span>
       </div>
 
-      <p className="text-lg text-zinc-400 max-w-xl leading-relaxed mb-10">
-        Student 2. roku informatyki na TU Delft z dużym doświadczeniem w programowaniu,
-        specjalizujący się w sztucznej inteligencji i uczeniu maszynowym.
-        Pasjonat budowania oprogramowania, które ma realny wpływ na świat.
-      </p>
+      <p className="text-lg text-zinc-400 max-w-xl leading-relaxed mb-10">{t.hero.bio}</p>
 
-      {/* Stat badges */}
       <div className="flex flex-wrap gap-3 mb-10">
-        {stats.map((s) => (
+        {t.hero.stats.map((s) => (
           <div
             key={s.label}
             className="flex flex-col items-center px-5 py-3 rounded-2xl border border-zinc-800 bg-zinc-900"
@@ -102,7 +96,7 @@ export default function Hero() {
           href="#projects"
           className="px-6 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium transition-colors"
         >
-          View Projects
+          {t.hero.viewProjects}
         </a>
         <a
           href="https://github.com/lukaszkasprzak"
@@ -116,7 +110,7 @@ export default function Hero() {
           href="#contact"
           className="px-6 py-3 rounded-full border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-sm font-medium transition-colors"
         >
-          Get in Touch
+          {t.hero.getInTouch}
         </a>
       </div>
     </section>

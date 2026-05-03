@@ -1,57 +1,13 @@
-const projects = [
-  {
-    title: "Children's Speech Recognition",
-    year: "2026",
-    description:
-      "Konkurs DrivenData — budowanie najlepszego modelu ML do rozpoznawania mowy dzieci w celu wczesnego wykrywania dysleksji i poprawy testów umiejętności czytania.",
-    tags: ["Python", "PyTorch", "ASR", "ML"],
-    href: "https://www.drivendata.org",
-    accent: "indigo",
-  },
-  {
-    title: "Policy Pipeline Simulator",
-    year: "2025–2026",
-    description:
-      "Agentyczna AI dla holenderskiego Ministerstwa Spraw Wewnętrznych (BZK). Symuluje procesy legislacyjne za pomocą agentów AI; zbudowane według wymagań urzędników rządowych.",
-    tags: ["Agentic AI", "Python", "Web App", "LLM"],
-    href: "#",
-    accent: "violet",
-  },
-  {
-    title: "Cross-Platform Note-Taking App",
-    year: "2025",
-    description:
-      "Projekt inżynierii oprogramowania — wieloplatformowa aplikacja desktopowa do notatek zbudowana w pięcioosobowym zespole.",
-    tags: ["Java", "Teamwork", "Desktop"],
-    href: "#",
-    accent: "sky",
-  },
-  {
-    title: "Online Shop — branco.pl",
-    year: "2024",
-    description:
-      "Sklep internetowy dla polskiej marki odzieżowej. Zintegrowane modele AI do personalizacji rekomendacji produktów i zwiększenia sprzedaży online.",
-    tags: ["Next.js", "AI", "E-commerce"],
-    href: "https://branco.pl",
-    accent: "emerald",
-  },
-  {
-    title: "CanSat",
-    year: "2023",
-    description:
-      "Konkurs licealny: budowa i programowanie satelity wielkości puszki — pełny stos oprogramowania wbudowanego do zbierania danych pokładowych.",
-    tags: ["C++", "Embedded", "Hardware"],
-    href: "#",
-    accent: "amber",
-  },
-];
+"use client";
+
+import { useLanguage } from "../contexts/LanguageContext";
 
 const accentMap: Record<string, string> = {
-  indigo: "group-hover:border-indigo-600 group-hover:text-indigo-400 tag-indigo",
-  violet: "group-hover:border-violet-600 group-hover:text-violet-400 tag-violet",
-  sky: "group-hover:border-sky-600 group-hover:text-sky-400 tag-sky",
-  emerald: "group-hover:border-emerald-600 group-hover:text-emerald-400 tag-emerald",
-  amber: "group-hover:border-amber-600 group-hover:text-amber-400 tag-amber",
+  indigo: "group-hover:border-indigo-600 group-hover:text-indigo-400",
+  violet: "group-hover:border-violet-600 group-hover:text-violet-400",
+  sky: "group-hover:border-sky-600 group-hover:text-sky-400",
+  emerald: "group-hover:border-emerald-600 group-hover:text-emerald-400",
+  amber: "group-hover:border-amber-600 group-hover:text-amber-400",
 };
 
 const tagAccentMap: Record<string, string> = {
@@ -63,15 +19,15 @@ const tagAccentMap: Record<string, string> = {
 };
 
 export default function Projects() {
+  const { t } = useLanguage();
+
   return (
     <section id="projects" className="py-24 max-w-5xl mx-auto px-6">
-      <h2 className="text-3xl font-bold text-zinc-100 mb-2">Projects</h2>
-      <p className="text-zinc-500 mb-12 text-sm">
-        Things I&apos;ve built, researched, and shipped.
-      </p>
+      <h2 className="text-3xl font-bold text-zinc-100 mb-2">{t.projects.title}</h2>
+      <p className="text-zinc-500 mb-12 text-sm">{t.projects.subtitle}</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((p) => (
+        {t.projects.items.map((p) => (
           <a
             key={p.title}
             href={p.href}
@@ -80,16 +36,10 @@ export default function Projects() {
             className={`group flex flex-col gap-3 rounded-2xl border border-zinc-800 bg-zinc-900 p-6 transition-colors ${accentMap[p.accent]}`}
           >
             <div className="flex items-start justify-between gap-2">
-              <h3 className="font-semibold text-zinc-100 transition-colors">
-                {p.title}
-              </h3>
-              <span className="font-mono text-xs text-zinc-500 shrink-0 pt-0.5">
-                {p.year}
-              </span>
+              <h3 className="font-semibold text-zinc-100 transition-colors">{p.title}</h3>
+              <span className="font-mono text-xs text-zinc-500 shrink-0 pt-0.5">{p.year}</span>
             </div>
-            <p className="text-sm text-zinc-400 leading-relaxed flex-1">
-              {p.description}
-            </p>
+            <p className="text-sm text-zinc-400 leading-relaxed flex-1">{p.description}</p>
             <div className="flex flex-wrap gap-2 mt-2">
               {p.tags.map((tag) => (
                 <span

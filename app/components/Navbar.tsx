@@ -1,18 +1,11 @@
 "use client";
 
 import { useState } from "react";
-
-const links = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Accomplishments", href: "#accomplishments" },
-  { label: "My Journey", href: "#journey" },
-  { label: "Demo", href: "#demo" },
-  { label: "Contact", href: "#contact" },
-];
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur border-b border-zinc-800">
@@ -23,33 +16,56 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-          {links.map((l) => (
+          {t.navbar.links.map((l) => (
             <li key={l.href}>
-              <a
-                href={l.href}
-                className="hover:text-zinc-100 transition-colors"
-              >
+              <a href={l.href} className="hover:text-zinc-100 transition-colors">
                 {l.label}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-zinc-400 hover:text-zinc-100"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          <span className="block w-5 h-px bg-current mb-1" />
-          <span className="block w-5 h-px bg-current mb-1" />
-          <span className="block w-5 h-px bg-current" />
-        </button>
+        <div className="flex items-center gap-3">
+          {/* Language switcher */}
+          <div className="flex items-center gap-0 text-xs font-mono border border-zinc-800 rounded-full overflow-hidden">
+            <button
+              onClick={() => setLang("en")}
+              className={`px-3 py-1.5 transition-colors ${
+                lang === "en"
+                  ? "bg-indigo-600 text-white"
+                  : "text-zinc-400 hover:text-zinc-100"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLang("pl")}
+              className={`px-3 py-1.5 transition-colors ${
+                lang === "pl"
+                  ? "bg-indigo-600 text-white"
+                  : "text-zinc-400 hover:text-zinc-100"
+              }`}
+            >
+              PL
+            </button>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden text-zinc-400 hover:text-zinc-100"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            <span className="block w-5 h-px bg-current mb-1" />
+            <span className="block w-5 h-px bg-current mb-1" />
+            <span className="block w-5 h-px bg-current" />
+          </button>
+        </div>
       </nav>
 
       {open && (
         <ul className="md:hidden flex flex-col px-6 pb-4 gap-4 text-sm text-zinc-400 bg-zinc-950">
-          {links.map((l) => (
+          {t.navbar.links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
