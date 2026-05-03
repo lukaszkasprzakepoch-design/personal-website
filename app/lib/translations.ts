@@ -14,6 +14,7 @@ export const translations = {
     },
     hero: {
       greeting: "Hello, I'm",
+      name: "Lukasz",
       roles: [
         "ML Engineer",
         "CS Student @ TU Delft",
@@ -217,33 +218,37 @@ export const translations = {
     },
     hero: {
       greeting: "Cześć, jestem",
+      name: "Łukasz",
       roles: [
-        "Inżynier ML",
+        "Software Engineer",
+        "Analityk danych",
         "Student CS @ TU Delft",
         "Szachista (2002 ELO)",
-        "Badacz AI",
+        "ML engineer @ Epoch",
       ],
       bio: "Student 2. roku informatyki na TU Delft z dużym doświadczeniem w programowaniu, specjalizujący się w sztucznej inteligencji i uczeniu maszynowym. Pasjonat budowania oprogramowania, które ma realny wpływ na świat.",
       viewProjects: "Zobacz projekty",
       getInTouch: "Napisz do mnie",
       stats: [
+        /*
         { label: "GPA", value: "8,5 / 10", sub: "TU Delft" },
         { label: "ELO", value: "2002", sub: "FIDE" },
         { label: "TOEFL", value: "108", sub: "Dwujęzyczny" },
         { label: "Rok", value: "2.", sub: "Rocznik 2027" },
-      ],
+        */
+        ],
     },
     projects: {
       title: "Projekty",
       subtitle: "To, co zbudowałem, zbadałem i wdrożyłem.",
       items: [
         {
-          title: "Children's Speech Recognition",
+          title: "On top of Pasketti",
           year: "2026",
           description:
             "Konkurs DrivenData — budowanie najlepszego modelu ML do rozpoznawania mowy dzieci w celu wczesnego wykrywania dysleksji i poprawy testów umiejętności czytania.",
           tags: ["Python", "PyTorch", "ASR", "ML"],
-          href: "https://www.drivendata.org",
+          href: "https://www.drivendata.org/competitions/309/childrens-phonetic-asr/leaderboard/",
           accent: "indigo",
         },
         {
@@ -252,18 +257,10 @@ export const translations = {
           description:
             "Agentyczna AI dla holenderskiego Ministerstwa Spraw Wewnętrznych (BZK). Symuluje procesy legislacyjne za pomocą agentów AI; zbudowane według wymagań urzędników rządowych.",
           tags: ["Agentic AI", "Python", "Web App", "LLM"],
-          href: "#",
+          href: "https://virtuelekamer.github.io/",
           accent: "violet",
         },
-        {
-          title: "Cross-Platform Note-Taking App",
-          year: "2025",
-          description:
-            "Projekt inżynierii oprogramowania — wieloplatformowa aplikacja desktopowa do notatek zbudowana w pięcioosobowym zespole.",
-          tags: ["Java", "Teamwork", "Desktop"],
-          href: "#",
-          accent: "sky",
-        },
+
         {
           title: "Online Shop — branco.pl",
           year: "2024",
@@ -272,15 +269,6 @@ export const translations = {
           tags: ["Next.js", "AI", "E-commerce"],
           href: "https://branco.pl",
           accent: "emerald",
-        },
-        {
-          title: "CanSat",
-          year: "2023",
-          description:
-            "Konkurs licealny: budowa i programowanie satelity wielkości puszki — pełny stos oprogramowania wbudowanego do zbierania danych pokładowych.",
-          tags: ["C++", "Embedded", "Hardware"],
-          href: "#",
-          accent: "amber",
         },
       ],
     },

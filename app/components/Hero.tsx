@@ -56,13 +56,13 @@ export default function Hero() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col justify-center max-w-5xl mx-auto px-6 pt-20"
+      className="flex flex-col justify-center max-w-5xl mx-auto px-6 py-20"
     >
       <p className="text-sm font-mono text-indigo-400 mb-4 tracking-widest uppercase">
         {t.hero.greeting}
       </p>
       <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-zinc-100 mb-4">
-        Lukasz
+        {t.hero.name}
         <br />
         Kasprzak
       </h1>
