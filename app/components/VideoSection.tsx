@@ -4,7 +4,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 
 export default function VideoSection() {
   const { t } = useLanguage();
-  const hasVideo = false;
+  const hasVideo = true;
 
   return (
     <section id="demo" className="py-24 max-w-5xl mx-auto px-6">
@@ -13,7 +13,7 @@ export default function VideoSection() {
 
       {hasVideo ? (
         <iframe
-          src="https://www.youtube.com/embed/REPLACE_ME"
+          src="https://www.youtube.com/embed/p1-vPJxEEDE"
           className="w-full aspect-video rounded-2xl border border-zinc-800"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
