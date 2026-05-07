@@ -35,7 +35,7 @@ export default function DiplomaModal({ isOpen, image, title, onClose }: DiplomaM
       onClick={onClose}
     >
       <div
-        className="relative max-w-4xl max-h-[90vh] rounded-2xl overflow-hidden"
+        className="relative w-[90vw] max-w-4xl rounded-2xl overflow-hidden bg-zinc-900"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -46,16 +46,14 @@ export default function DiplomaModal({ isOpen, image, title, onClose }: DiplomaM
           ✕
         </button>
 
-        <div className="relative w-full h-full">
-          <Image
-            src={image}
-            alt={title}
-            width={1200}
-            height={900}
-            className="w-full h-full object-contain"
-            quality={95}
-          />
-        </div>
+        <Image
+          src={image}
+          alt={title}
+          width={1200}
+          height={900}
+          className="w-full h-auto max-h-[85vh] object-contain"
+          quality={95}
+        />
 
         <p className="absolute bottom-4 left-4 text-white text-sm font-medium bg-black/60 px-3 py-1 rounded-full">
           {title}
