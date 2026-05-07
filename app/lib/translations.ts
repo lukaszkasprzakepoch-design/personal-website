@@ -25,11 +25,7 @@ export const translations = {
       viewProjects: "View Projects",
       getInTouch: "Get in Touch",
       stats: [
-        { label: "GPA", value: "8.5 / 10", sub: "TU Delft" },
-        { label: "ELO", value: "2002", sub: "FIDE rated" },
-        { label: "TOEFL", value: "108", sub: "Bilingual EN" },
-        { label: "Year", value: "2nd", sub: "Class of 2027" },
-      ],
+           ],
     },
     projects: {
       title: "Projects",
@@ -54,15 +50,6 @@ export const translations = {
           accent: "violet",
         },
         {
-          title: "Cross-Platform Note-Taking App",
-          year: "2025",
-          description:
-            "Software engineering project — a cross-platform desktop note-taking app built in a team of five.",
-          tags: ["Java", "Teamwork", "Desktop"],
-          href: "#",
-          accent: "sky",
-        },
-        {
           title: "Online Shop — branco.pl",
           year: "2024",
           description:
@@ -70,15 +57,6 @@ export const translations = {
           tags: ["Next.js", "AI", "E-commerce"],
           href: "https://branco.pl",
           accent: "emerald",
-        },
-        {
-          title: "CanSat",
-          year: "2023",
-          description:
-            "High school competition: building and programming a can-sized satellite — full embedded software stack for on-board data collection.",
-          tags: ["C++", "Embedded", "Hardware"],
-          href: "#",
-          accent: "amber",
         },
       ],
     },
@@ -355,7 +333,7 @@ export const translations = {
         p1mid: " na ",
         p1uni: "TU Delft",
         p1post: " — jednej z czołowych uczelni technicznych w Europie.",
-        p2: "Specjalizuję się w AI i uczeniu maszynowym. Pracuję w Epoch — studenckim centrum badań AI na TU Delft. Buduję rzeczy, które mają znaczenie.",
+        p2: "Specjalizuję się w AI i uczeniu maszynowym. Pracuję w Epoch — studenckim centrum badań AI na TU Delft. Buduję software, który ma znaczenie.",
       },
       australia: {
         tag: "🇦🇺 Australia · Sie 2026",
@@ -364,7 +342,7 @@ export const translations = {
         p1pre: "Wyjeżdżam na ",
         p1uni: "UNSW Sydney",
         p1post:
-          " na semestr wymiany w sierpniu 2026 — na drugi koniec świata, kolejny krok do przodu.",
+          " na semestr wymiany w sierpniu 2026 — będę studiwał finanse na drugim końcu świata!",
         p2: "Każdy dotychczasowy rozdział był świadomym skokiem. Ten nie jest wyjątkiem.",
       },
     },

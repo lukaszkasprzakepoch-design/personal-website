@@ -3,14 +3,12 @@
 import { useLanguage } from "../contexts/LanguageContext";
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/lukaszkasprzak", icon: "GH" },
+  { label: "GitHub", href: "https://github.com/lukaszkasprzakepoch-design", icon: "GH" },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/lukasz-kasprzak-0702a4275",
     icon: "in",
   },
-  { label: "Email", href: "mailto:L.G.Kasprzak@student.tudelft.nl", icon: "@" },
-  { label: "Phone", href: "tel:+48510956204", icon: "☎" },
 ];
 
 export default function Contact() {
@@ -44,10 +42,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-16 flex flex-col items-center gap-2">
-          <p className="text-zinc-600 text-xs font-mono">
-            L.G.Kasprzak@student.tudelft.nl · +48 510 956 204
-          </p>
-          <p className="text-zinc-700 text-xs">
+<p className="text-zinc-700 text-xs">
             © {new Date().getFullYear()} Lukasz Kasprzak · {t.contact.location}
           </p>
         </div>
