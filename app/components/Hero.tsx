@@ -20,6 +20,7 @@ function useTypingRotator(items: readonly string[], speed = 60, pause = 1800) {
 
   useEffect(() => {
     const target = items[idx];
+    if (!target) return;
     if (phase === "typing") {
       if (charRef.current < target.length) {
         const t = setTimeout(() => {
@@ -76,22 +77,7 @@ export default function Hero() {
 
       <p className="text-lg text-zinc-400 max-w-xl leading-relaxed mb-10">{t.hero.bio}</p>
 
-      <div className="flex flex-wrap gap-3 mb-10">
-        {t.hero.stats.map((s) => (
-          <div
-            key={s.label}
-            className="flex flex-col items-center px-5 py-3 rounded-2xl border border-zinc-800 bg-zinc-900"
-          >
-            <span className="text-xs text-zinc-500 font-mono tracking-widest uppercase mb-0.5">
-              {s.label}
-            </span>
-            <span className="text-lg font-bold text-zinc-100">{s.value}</span>
-            <span className="text-xs text-zinc-500">{s.sub}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex gap-4 flex-wrap">
+<div className="flex gap-4 flex-wrap">
         <a
           href="#projects"
           className="px-6 py-3 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium transition-colors"
@@ -99,7 +85,7 @@ export default function Hero() {
           {t.hero.viewProjects}
         </a>
         <a
-          href="https://github.com/lukaszkasprzak"
+          href="https://github.com/lukaszkasprzakepoch-design"
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 rounded-full border border-zinc-700 hover:border-zinc-500 text-zinc-300 text-sm font-medium transition-colors"
