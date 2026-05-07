@@ -37,7 +37,7 @@ export const translations = {
           description:
             "DrivenData competition — building the best ML model for children's speech recognition to enable early dyslexia detection and improve reading skills assessments.",
           tags: ["Python", "PyTorch", "ASR", "ML"],
-          href: "https://www.drivendata.org",
+          href: "https://www.drivendata.org/competitions/309/childrens-phonetic-asr/leaderboard/",
           accent: "indigo",
         },
         {
@@ -46,7 +46,7 @@ export const translations = {
           description:
             "Agentic AI for the Dutch Ministry of the Interior (BZK). Simulates legislative processes using AI agents; built to the requirements of government officials.",
           tags: ["Agentic AI", "Python", "Web App", "LLM"],
-          href: "#",
+          href: "https://virtuelekamer.github.io/",
           accent: "violet",
         },
         {
