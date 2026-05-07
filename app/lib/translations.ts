@@ -91,7 +91,7 @@ export const translations = {
           title: "Distinction — Polish Informatics Olympiad",
           description:
             "National distinction in the Informatics Olympiad for outstanding results in competitive programming.",
-          diploma: "/Dyplomy/CamScanner 08-26-2024 21.16.webp",
+          diploma: "/Dyplomy/InformatycznaOlimpiada.webp",
         },
         {
           year: "2024",

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 
 interface DiplomaModalProps {
   isOpen: boolean;
@@ -31,31 +30,33 @@ export default function DiplomaModal({ isOpen, image, title, onClose }: DiplomaM
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-8 flex items-center justify-center"
       onClick={onClose}
     >
-      <div
-        className="relative w-[90vw] max-w-4xl rounded-2xl overflow-hidden bg-zinc-900"
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className="relative" onClick={(e) => e.stopPropagation()}>
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 flex items-center justify-center text-white transition-colors"
+          className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-black/80 flex items-center justify-center text-white transition-colors"
           aria-label="Close modal"
         >
           ✕
         </button>
 
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={image}
           alt={title}
-          width={1200}
-          height={900}
-          className="w-full h-auto max-h-[85vh] object-contain"
-          quality={95}
+          style={{
+            display: "block",
+            maxWidth: "calc(100vw - 4rem)",
+            maxHeight: "calc(100vh - 4rem)",
+            width: "auto",
+            height: "auto",
+            borderRadius: "1rem",
+          }}
         />
 
-        <p className="absolute bottom-4 left-4 text-white text-sm font-medium bg-black/60 px-3 py-1 rounded-full">
+        <p className="absolute bottom-3 left-3 text-white text-sm font-medium bg-black/60 px-3 py-1 rounded-full">
           {title}
         </p>
       </div>
