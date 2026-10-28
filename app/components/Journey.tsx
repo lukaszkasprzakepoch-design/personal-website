@@ -60,8 +60,12 @@ export default function Journey() {
               <AustraliaMap />
             </div>
             <div className="md:pl-8">
-              <p className={`text-[11px] font-mono tracking-widest ${j.australia.tagColor} uppercase mb-3`}>
+              <p className={`flex items-center gap-3 text-[11px] font-mono tracking-widest ${j.australia.tagColor} uppercase mb-3`}>
                 {j.australia.tag}
+                <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-300 normal-case tracking-normal">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                  {j.australia.now}
+                </span>
               </p>
               <h3 className="text-3xl font-bold text-zinc-100 mb-4">{j.australia.heading}</h3>
               <p className="text-zinc-400 leading-relaxed mb-4">

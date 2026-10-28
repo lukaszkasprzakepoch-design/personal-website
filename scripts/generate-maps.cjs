@@ -122,7 +122,7 @@ const MAPS = [
     color: "#f59e0b",
     tilt: -4,
     pins: [
-      { coordinates: [151.21, -33.87], label: "Sydney", sub: "UNSW · Aug 2026", offsetX: -12, offsetY: -18, anchor: "end" },
+      { coordinates: [151.21, -33.87], label: "Sydney", sub: "UNSW · Aug–Dec 2026", offsetX: -12, offsetY: -18, anchor: "end" },
     ],
   },
 ];

@@ -12,7 +12,7 @@
       <circle r="9" fill="none" stroke="#f59e0b" stroke-width="0.8" opacity="0.4"/>
       <g transform="translate(-12,-18)">
         <text text-anchor="end" style="font-size:16px;font-weight:700;fill:#f4f4f5;font-family:sans-serif">Sydney</text>
-        <text y="14" text-anchor="end" style="font-size:16px;fill:#a1a1aa;font-family:sans-serif">UNSW · Aug 2026</text>
+        <text y="14" text-anchor="end" style="font-size:16px;fill:#a1a1aa;font-family:sans-serif">UNSW · Aug–Dec 2026</text>
       </g>
     </g>
   </g>

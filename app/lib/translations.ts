@@ -18,10 +18,11 @@ export const translations = {
       roles: [
         "ML Engineer",
         "CS Student @ TU Delft",
+        "Exchange @ UNSW Sydney",
         "Chess Player (2002 ELO)",
         "AI Researcher",
       ],
-      bio: "2nd-year Computer Science student at TU Delft with strong engineering foundations, specialising in artificial intelligence and machine learning. Passionate about building software that has real-world impact.",
+      bio: "3rd-year Computer Science student at TU Delft, currently on an exchange semester at UNSW Sydney (until December 2026). Strong engineering foundations, specialising in artificial intelligence and machine learning. Passionate about building software that has real-world impact.",
       viewProjects: "View Projects",
       getInTouch: "Get in Touch",
       stats: [
@@ -31,6 +32,15 @@ export const translations = {
       title: "Projects",
       subtitle: "Things I've built, researched, and shipped.",
       items: [
+        {
+          title: "Kolibair",
+          year: "2026",
+          description:
+            "Founding member of Kolibair, an aerospace startup founded by TU Delft engineers that builds VTOL fixed-wing drones for emergency services like firefighters and search-and-rescue teams. Responsible for the onboard edge AI that detects and classifies objects in real time.",
+          tags: ["Edge AI", "Computer Vision", "Drones", "Startup"],
+          href: "https://kolibair.com",
+          accent: "sky",
+        },
         {
           title: "Children's Speech Recognition",
           year: "2026",
@@ -67,9 +77,9 @@ export const translations = {
       experience: "Experience",
       jobTitle: "Implementations Engineer",
       company: "Epoch · TU Delft",
-      jobPeriod: "Oct 2025 – present",
+      jobPeriod: "Oct 2025 – Jun 2026",
       jobDesc:
-        "Building, deploying, and maintaining ML infrastructure at TU Delft's student AI research centre.",
+        "Built, deployed, and maintained ML infrastructure at TU Delft's student AI research centre.",
       skillCategories: ["Languages", "ML / AI", "Algorithms", "Other"],
       awards: [
         {
@@ -140,22 +150,23 @@ export const translations = {
       netherlands: {
         tag: "🇳🇱 Netherlands · 2024 – present",
         tagColor: "text-green-400",
-        heading: "Current Chapter",
-        p1pre: "2nd year of a ",
+        heading: "The Delft Years",
+        p1pre: "3rd year of a ",
         p1degree: "BSc Computer Science & Engineering",
         p1mid: " at ",
         p1uni: "TU Delft",
         p1post: " — one of Europe's leading technical universities.",
-        p2: "Specialising in AI and machine learning. Working at Epoch, TU Delft's student AI research organisation. Building things that matter.",
+        p2: "Specialising in AI and machine learning. Spent 2025/26 at Epoch, TU Delft's student AI research organisation. Building things that matter.",
       },
       australia: {
-        tag: "🇦🇺 Australia · Aug 2026",
+        tag: "🇦🇺 Australia · Aug – Dec 2026",
         tagColor: "text-amber-400",
-        heading: "Next Destination",
-        p1pre: "Heading to ",
+        now: "Now",
+        heading: "Current Chapter",
+        p1pre: "On an exchange semester at ",
         p1uni: "UNSW Sydney",
         p1post:
-          " for an exchange semester in August 2026 — the other side of the world, the next step forward.",
+          " from August to December 2026 — the other side of the world, the next step forward.",
         p2: "Every chapter so far has been a deliberate leap. This one is no different.",
       },
     },
@@ -163,6 +174,21 @@ export const translations = {
       title: "Demo",
       subtitle: "Seeing is believing — a walkthrough of the work in action.",
       comingSoon: "🎬 Video demo — coming soon",
+      // Newest first — add new videos at the top.
+      items: [
+        {
+          youtubeId: "iwLsU5KOYJg",
+          title: "Kolibair",
+          year: "2026",
+          caption: "VTOL drones with AI detection for emergency services.",
+        },
+        {
+          youtubeId: "p1-vPJxEEDE",
+          title: "Policy Pipeline Simulator",
+          year: "2025–2026",
+          caption: "Agentic AI simulating legislative processes for the Dutch Ministry of the Interior (BZK).",
+        },
+      ],
     },
     contact: {
       title: "Get in Touch",
@@ -198,10 +224,11 @@ export const translations = {
         "Software Engineer",
         "Analityk danych",
         "Student CS @ TU Delft",
+        "Na wymianie @ UNSW Sydney",
         "Szachista (2002 ELO)",
-        "ML engineer @ Epoch",
+        "Edge AI @ Kolibair",
       ],
-      bio: "Student 2. roku informatyki na TU Delft z dużym doświadczeniem w programowaniu, specjalizujący się w sztucznej inteligencji i uczeniu maszynowym. Pasjonat budowania oprogramowania, które ma realny wpływ na świat.",
+      bio: "Student 3. roku informatyki na TU Delft, obecnie na semestrze wymiany na UNSW Sydney (do grudnia 2026). Mam duże doświadczenie w programowaniu i specjalizuję się w sztucznej inteligencji i uczeniu maszynowym. Pasjonat budowania oprogramowania, które ma realny wpływ na świat.",
       viewProjects: "Zobacz projekty",
       getInTouch: "Napisz do mnie",
       stats: [
@@ -217,6 +244,15 @@ export const translations = {
       title: "Projekty",
       subtitle: "To, co zbudowałem, zbadałem i wdrożyłem.",
       items: [
+        {
+          title: "Kolibair",
+          year: "2026",
+          description:
+            "Członek założyciel Kolibair — startupu lotniczego założonego przez inżynierów TU Delft, który buduje drony VTOL ze skrzydłem stałym dla służb ratunkowych, takich jak straż pożarna i zespoły poszukiwawczo-ratownicze. Odpowiadam za edge AI na pokładzie drona, które w czasie rzeczywistym wykrywa i klasyfikuje obiekty.",
+          tags: ["Edge AI", "Computer Vision", "Drony", "Startup"],
+          href: "https://kolibair.com",
+          accent: "sky",
+        },
         {
           title: "On top of Pasketti",
           year: "2026",
@@ -254,9 +290,9 @@ export const translations = {
       experience: "Doświadczenie",
       jobTitle: "Inżynier ds. wdrożeń",
       company: "Epoch · TU Delft",
-      jobPeriod: "Paź 2025 – obecnie",
+      jobPeriod: "Paź 2025 – cze 2026",
       jobDesc:
-        "Budowanie, wdrażanie i utrzymywanie infrastruktury ML w studenckim centrum badań AI na TU Delft.",
+        "Budowałem, wdrażałem i utrzymywałem infrastrukturę ML w studenckim centrum badań AI na TU Delft.",
       skillCategories: ["Języki", "ML / AI", "Algorytmy", "Inne"],
       awards: [
         {
@@ -327,22 +363,23 @@ export const translations = {
       netherlands: {
         tag: "🇳🇱 Holandia · 2024 – dziś",
         tagColor: "text-green-400",
-        heading: "Obecny rozdział",
-        p1pre: "2. rok studiów ",
+        heading: "Lata w Delft",
+        p1pre: "3. rok studiów ",
         p1degree: "BSc Computer Science & Engineering",
         p1mid: " na ",
         p1uni: "TU Delft",
         p1post: " — jednej z czołowych uczelni technicznych w Europie.",
-        p2: "Specjalizuję się w AI i uczeniu maszynowym. Pracuję w Epoch — studenckim centrum badań AI na TU Delft. Buduję software, który ma znaczenie.",
+        p2: "Specjalizuję się w AI i uczeniu maszynowym. W roku akademickim 2025/26 pracowałem w Epoch — studenckim centrum badań AI na TU Delft. Buduję software, który ma znaczenie.",
       },
       australia: {
-        tag: "🇦🇺 Australia · Sie 2026",
+        tag: "🇦🇺 Australia · Sie – Gru 2026",
         tagColor: "text-amber-400",
-        heading: "Następny cel",
-        p1pre: "Wyjeżdżam na ",
+        now: "Teraz",
+        heading: "Obecny rozdział",
+        p1pre: "Jestem na semestrze wymiany na ",
         p1uni: "UNSW Sydney",
         p1post:
-          " na semestr wymiany w sierpniu 2026 — będę studiwał finanse na drugim końcu świata!",
+          " — od sierpnia do grudnia 2026 studiuję finanse na drugim końcu świata!",
         p2: "Każdy dotychczasowy rozdział był świadomym skokiem. Ten nie jest wyjątkiem.",
       },
     },
@@ -350,6 +387,20 @@ export const translations = {
       title: "Demo",
       subtitle: "Lepiej raz zobaczyć — prezentacja projektu w akcji.",
       comingSoon: "🎬 Demo wideo — wkrótce",
+      items: [
+        {
+          youtubeId: "iwLsU5KOYJg",
+          title: "Kolibair",
+          year: "2026",
+          caption: "Drony VTOL ze sztuczną inteligencją dla służb ratunkowych.",
+        },
+        {
+          youtubeId: "p1-vPJxEEDE",
+          title: "Policy Pipeline Simulator",
+          year: "2025–2026",
+          caption: "Agentyczna AI symulująca procesy legislacyjne dla holenderskiego Ministerstwa Spraw Wewnętrznych (BZK).",
+        },
+      ],
     },
     contact: {
       title: "Napisz do mnie",
